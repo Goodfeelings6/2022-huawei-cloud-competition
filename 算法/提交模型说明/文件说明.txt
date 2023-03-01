@@ -1,0 +1,5 @@
+1、baseline_algorithm: 实现的流量统计算法
+2、count_config.py：对应不同测试视频的配置信息
+3、customize_service：ModelArts平台调用
+4、config.json：ModelArts配置文件
+5、model_pause.pth：占位模型文件，用于满足平台格式要求
