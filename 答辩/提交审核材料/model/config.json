@@ -1,0 +1,50 @@
+{
+    "model_type": "PyTorch",
+    "model_algorithm": "predict_analysis",
+    "metrics": {
+        "f1": 0.345294,
+        "accuracy": 0.462963,
+        "precision": 0.338977,
+        "recall": 0.351852
+	},
+    "apis": [
+		{
+			"protocol": "http",
+			"url": "/",
+			"method": "post",
+			"request": {
+				"Content-type": "application/json",
+				"data": {
+					"type": "object",
+					"properties": {
+						"lane": {
+							"type": "file"
+						}
+					},
+					"required": ["lane"]
+				}
+			},
+			"response": {
+				"Content-type": "application/json",
+				"data": {
+					"type": "object",
+					"properties": {
+						"count": {
+							"type": "array"
+						}
+					},
+					"required": ["count"]
+				}
+			}
+		}],
+    "dependencies": [
+		{
+			"installer": "pip",
+			"packages": [
+				{
+					"restraint": "EXACT",
+					"package_version": "1.15.0",
+					"package_name": "numpy"
+				}]
+        }]
+}
